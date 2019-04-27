@@ -28,8 +28,7 @@ public class Teacher implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@JsonIgnore
-	@SequenceGenerator(name="TEACHER_ID_GENERATOR", sequenceName="TEACHER_SEQ")
+	@SequenceGenerator(name="TEACHER_ID_GENERATOR", sequenceName="TEACHER_SEQ", allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TEACHER_ID_GENERATOR")
 	private Integer id;
 
