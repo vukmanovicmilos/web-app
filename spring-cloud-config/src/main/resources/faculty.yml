@@ -1,0 +1,31 @@
+server:
+  port: 9100
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    password: postgres
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/faculty
+    username: postgres
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  cloud:
+    config:
+      override-none: true
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+eureka:
+    client:
+      service-url:
+          default-zone: http://localhost:8761/eureka
+

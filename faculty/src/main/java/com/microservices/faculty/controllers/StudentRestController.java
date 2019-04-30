@@ -1,5 +1,6 @@
 package com.microservices.faculty.controllers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class StudentRestController {
 
 	@Autowired
 	private StudentRepository studentRepository;
-
+	
 	@GetMapping
 	public Collection<Student> getStudents() {
 		return studentRepository.findAll();
@@ -33,6 +34,11 @@ public class StudentRestController {
 	@GetMapping("{id}")
 	public Student getOneStudent(@RequestParam("id") int id) {
 		return studentRepository.getOne(id);
+	}
+	
+	@GetMapping("studentsForCourse/{courseId}")
+	public ArrayList<Object> getStudentsForCourse(@PathVariable("courseId") Integer courseId) {
+		return studentRepository.findByCourses_Id(courseId);
 	}
 
 	// insert
