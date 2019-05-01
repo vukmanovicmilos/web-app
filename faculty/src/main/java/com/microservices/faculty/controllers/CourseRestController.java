@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservices.faculty.jpa.Course;
@@ -37,7 +36,7 @@ public class CourseRestController {
 	
 	@ApiOperation("Returns course with an id that is passed as a path variable")
 	@GetMapping("{id}")
-	public Course getOneCourse(@RequestParam("id") int id) {
+	public Course getOneCourse(@PathVariable("id") int id) {
 		return courseRepository.getOne(id);
 	}
 

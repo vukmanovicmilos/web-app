@@ -40,7 +40,7 @@ public class Teacher implements Serializable {
 	
 	@Lob
     @Column(name="picture")
-	@JsonIgnore
+	//@JsonIgnore
 	@Type(type="org.hibernate.type.BinaryType")
 	private byte[] picture;
 

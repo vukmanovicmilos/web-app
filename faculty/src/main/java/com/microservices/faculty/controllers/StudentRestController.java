@@ -45,7 +45,7 @@ public class StudentRestController {
 	@ApiOperation("Returns students enrolled to a course with an course id that is passed as a path variable (from ms faculty)")
 	@GetMapping("studentsForCourse/{courseId}")
 	public ArrayList<Object> getStudentsForCourse(@PathVariable("courseId") Integer courseId) {
-		return studentRepository.findByCourses_Id(courseId);
+		return studentRepository.findByCourses_IdOrderByLastName(courseId);
 	}
 
 	// insert

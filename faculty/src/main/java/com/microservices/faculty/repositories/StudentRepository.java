@@ -9,6 +9,6 @@ import com.microservices.faculty.jpa.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 
-	public ArrayList<Object> findByCourses_Id(@Param("id") Integer id);
+	public ArrayList<Object> findByCourses_IdOrderByLastName(@Param("id") Integer id);
 	
 }
