@@ -20,24 +20,31 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microservices.faculty.jpa.Teacher;
 import com.microservices.faculty.repositories.TeacherRepository;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(tags = { "Teacher CRUD operations" })
 @RestController
 @RequestMapping("teacher")
 public class TeacherRestController {
 
 	@Autowired
 	private TeacherRepository teacherRepository;
-
+	
+	@ApiOperation("Returns all teachers from database")
 	@GetMapping
 	public Collection<Teacher> getTeachers() {
 		return teacherRepository.findAll();
 	}
 
-	@GetMapping("/{id}")
+	@ApiOperation("Returns teacher with an id that is passed as a path variable")
+	@GetMapping("{id}")
 	public Teacher getOneTeacher(@RequestParam("id") int id) {
 		return teacherRepository.getOne(id);
 	}
 
 	// insert
+	@ApiOperation("Insert teacher in database")
 	@PostMapping
 	public ResponseEntity<Teacher> insertTeacher(@RequestParam String teacherJson,
 			@RequestParam(value = "picture", required = false) MultipartFile picture) {
@@ -56,6 +63,7 @@ public class TeacherRestController {
 	}
 
 	// update
+	@ApiOperation("Update teacher in database")
 	@PutMapping
 	public ResponseEntity<Teacher> updateTeacher(@RequestParam String teacherJson, @RequestParam(value = "picture", required = false) MultipartFile picture) {
 		try {
@@ -75,6 +83,7 @@ public class TeacherRestController {
 	}
 
 	@DeleteMapping("{id}")
+	@ApiOperation("Delete teacher from database")
 	public ResponseEntity<Teacher> deleteTeacher(@PathVariable("id") Integer id) {
 		if (!teacherRepository.existsById(id))
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

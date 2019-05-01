@@ -19,6 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservices.faculty.jpa.Student;
 import com.microservices.faculty.repositories.StudentRepository;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(tags = { "Student CRUD operations" })
 @RestController
 @RequestMapping("student")
 public class StudentRestController {
@@ -26,22 +30,26 @@ public class StudentRestController {
 	@Autowired
 	private StudentRepository studentRepository;
 	
+	@ApiOperation("Returns all students from database")
 	@GetMapping
 	public Collection<Student> getStudents() {
 		return studentRepository.findAll();
 	}
 
+	@ApiOperation("Returns student with an id that is passed as a path variable")
 	@GetMapping("{id}")
 	public Student getOneStudent(@RequestParam("id") int id) {
 		return studentRepository.getOne(id);
 	}
 	
+	@ApiOperation("Returns students enrolled to a course with an course id that is passed as a path variable (from ms faculty)")
 	@GetMapping("studentsForCourse/{courseId}")
 	public ArrayList<Object> getStudentsForCourse(@PathVariable("courseId") Integer courseId) {
 		return studentRepository.findByCourses_Id(courseId);
 	}
 
 	// insert
+	@ApiOperation("Insert student in database")
 	@PostMapping
 	public ResponseEntity<Student> insertStudent(@RequestBody Student student) {
 		studentRepository.save(student);
@@ -49,6 +57,7 @@ public class StudentRestController {
 	}
 
 	// update
+	@ApiOperation("Update student in database")
 	@PutMapping
 	public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
 		if (!studentRepository.existsById(student.getId()))
@@ -56,7 +65,7 @@ public class StudentRestController {
 		studentRepository.save(student);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-
+	@ApiOperation("Delete student from database")
 	@DeleteMapping("{id}")
 	public ResponseEntity<Student> deleteStudent(@PathVariable("id") Integer id) {
 		if (!studentRepository.existsById(id))

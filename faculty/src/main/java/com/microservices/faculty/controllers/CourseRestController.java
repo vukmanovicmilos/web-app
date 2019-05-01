@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservices.faculty.jpa.Course;
 import com.microservices.faculty.repositories.CourseRepository;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(tags = { "Course CRUD operations" })
 @RestController
 @RequestMapping("course")
 public class CourseRestController {
@@ -25,17 +29,20 @@ public class CourseRestController {
 	@Autowired
 	private CourseRepository courseRepository;
 
+	@ApiOperation("Returns all courses from database")
 	@GetMapping
 	public Collection<Course> getCourses() {
 		return courseRepository.findAll();
 	}
-
+	
+	@ApiOperation("Returns course with an id that is passed as a path variable")
 	@GetMapping("{id}")
 	public Course getOneCourse(@RequestParam("id") int id) {
 		return courseRepository.getOne(id);
 	}
 
 	// insert
+	@ApiOperation("Insert course in database")
 	@PostMapping
 	public ResponseEntity<Course> insertCourse(@RequestBody Course course) {
 		courseRepository.save(course);
@@ -43,6 +50,7 @@ public class CourseRestController {
 	}
 
 	// update
+	@ApiOperation("Update course in database")
 	@PutMapping
 	public ResponseEntity<Course> updateCourse(@RequestBody Course course) {
 		if (!courseRepository.existsById(course.getId()))
@@ -51,6 +59,7 @@ public class CourseRestController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
+	@ApiOperation("Delete course from database")
 	@DeleteMapping("{id}")
 	public ResponseEntity<Course> deleteCourse(@PathVariable("id") Integer id) {
 		if (!courseRepository.existsById(id))
