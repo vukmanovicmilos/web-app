@@ -56,9 +56,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                <excludes>
-                    <exclude>launch/*.launch</exclude>
-                </excludes>
             </configuration>
 			</plugin>
 		</plugins>
