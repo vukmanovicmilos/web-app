@@ -1,0 +1,14 @@
+server:
+  port: 9200
+eureka:
+    client:
+      service-url:
+          default-zone: http://localhost:8761/eureka
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    password: postgres
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/faculty
+    username: postgres
