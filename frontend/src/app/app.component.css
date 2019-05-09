@@ -1,0 +1,62 @@
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.sidenav .mat-toolbar {
+  background: #3f51b5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+}
+
+.mat-panel-title {
+  color: red;
+}
+
+.title-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: white;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: left;
+}
+
+.mat-button {
+  text-align: left;
+  display: block;
+}
+
+.mat-expansion-panel-header-description {
+  color: white;
+  background-color: #3f51b5;
+}
+
+.mat-expansion-panel-header {
+  color: white;
+  background-color: #3f51b5;
+}
+
+.mat-expansion-panel {
+  color: white;
+  background-color: #3f51b5;
+}

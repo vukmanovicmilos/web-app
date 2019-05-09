@@ -1,0 +1,34 @@
+<div class="container">
+  <h3 mat-dialog-title *ngIf="flag == 1">Add new student</h3>
+  <h3 mat-dialog-title *ngIf="flag == 2">Modify student</h3>
+  <h3 mat-dialog-title *ngIf="flag == 3">Delete student</h3>
+
+  <form class="mat-dialog-content" #formControl="ngForm">
+    <div class="form">
+      <mat-form-field>
+        <input matInput required placeholder="First name" [(ngModel)]="data.firstName" name="firstName" [disabled]="flag == 3">
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput required placeholder="Last name" [(ngModel)]="data.lastName" name="lastName" [disabled]="flag == 3">
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput required placeholder="Index number" [(ngModel)]="data.indexNumber" name="indexNumber" [disabled]="flag == 3">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-flat-button color="primary" *ngIf="flag == 1" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1"
+        (click)="add()">Save</button>
+      <button mat-flat-button color="primary" *ngIf="flag == 2" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1"
+        (click)="update()">Save</button>
+      <button mat-flat-button color="warn" *ngIf="flag == 3" [type]="submit" [mat-dialog-close]="3" (click)="delete()">Delete</button>
+      <button mat-flat-button (click)="cancel()" tabindex="-1">Cancel</button>
+    </div>
+  </form>
+</div>

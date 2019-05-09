@@ -1,0 +1,68 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side" class="background">
+    <mat-toolbar color="primary">
+      <a mat-button class="title-center">
+        <mat-icon [routerLink]="['']">home</mat-icon>
+      </a>
+    </mat-toolbar>
+    <mat-accordion>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="background">
+            Application
+          </mat-panel-title>
+          <mat-panel-description>
+            Faculty application
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-button [routerLink]="['course']">Course</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button [routerLink]="['student']">Student</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button [routerLink]="['teacher']">Teacher</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="background">
+            Information
+          </mat-panel-title>
+          <mat-panel-description>
+            Basic information
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-button [routerLink]="['help']">Help</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button [routerLink]="['author']">Author</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="background">
+            Administration
+          </mat-panel-title>
+          <mat-panel-description>
+            Backend tools
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-button (click)="openSwagger()">Swagger</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button (click)="openEureka()">Eureka</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+  <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+</mat-sidenav-container>

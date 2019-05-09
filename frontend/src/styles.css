@@ -1,0 +1,7 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
