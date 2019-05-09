@@ -1,8 +1,14 @@
 package com.microservices.faculty.controllers;
 
-import java.util.Collection;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,13 +35,18 @@ public class CourseRestController {
 	private CourseRepository courseRepository;
 
 	@ApiOperation("Returns all courses from database")
-	@GetMapping
-	public Collection<Course> getCourses() {
-		return courseRepository.findAll();
+	@GetMapping("{filter}")
+	public Page<Course> getCourses(@PathVariable ("filter") String filter, @PageableDefault(sort = {"id"}) Pageable p, HttpServletRequest request){
+		System.out.println("GET Course "+
+				" ip: "+request.getRemoteAddr()+
+				" datum i vreme pristupa: "+new SimpleDateFormat("dd.MM.yyyy. HH:mm:ss").format(Calendar.getInstance().getTime()));
+		if(filter.equals("*"))
+			return courseRepository.findAll(p);
+		return courseRepository.findByNameContainingIgnoreCaseOrLabelContainingIgnoreCaseOrStartDateContainingIgnoreCase(filter, filter, filter, p);
 	}
 	
 	@ApiOperation("Returns course with an id that is passed as a path variable")
-	@GetMapping("{id}")
+	@GetMapping("one/{id}")
 	public Course getOneCourse(@PathVariable("id") int id) {
 		return courseRepository.getOne(id);
 	}

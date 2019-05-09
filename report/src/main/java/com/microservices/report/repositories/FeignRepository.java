@@ -14,10 +14,10 @@ import com.microservices.faculty.jpa.Course;
 @RibbonClient(name="faculty")
 public interface FeignRepository {
 	
-	@GetMapping(value = "student/studentsForCourse/{courseId}")
-	public ArrayList<Object> findByCourse(@PathVariable("courseId") Integer courseId);
+	@GetMapping(value = "student/studentsForCoursePdf/{courseId}")
+	public ArrayList<Object> getStudentsForCoursePdf(@PathVariable("courseId") Integer courseId);
 	
-	@GetMapping(value = "course/{courseId}")
+	@GetMapping(value = "course/one/{courseId}")
 	public Course getOneCourse(@PathVariable("courseId") Integer courseId);
 
 }

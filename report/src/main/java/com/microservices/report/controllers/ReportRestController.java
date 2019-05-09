@@ -41,7 +41,7 @@ public class ReportRestController {
 	@ApiOperation("Returns students enrolled to a course with a id that is passed as a path variable (from ms faculty)")
 	@GetMapping("/studentsForCourse/{courseId}")
 	public ArrayList<Object> getstudentsForCourse(@PathVariable("courseId") Integer id) {
-		return feignRepository.findByCourse(id);
+		return feignRepository.getStudentsForCoursePdf(id);
 	}
 
 	@ApiOperation("Returns pdf report of students enrolled to a course with a id that is passed as a path variable (from ms faculty)")
@@ -49,7 +49,7 @@ public class ReportRestController {
 	public void getstudentsForCoursePdf(@PathVariable("courseId") Integer id, HttpServletResponse response) {
 		try {
 
-			ArrayList<Object> students = feignRepository.findByCourse(id);
+			ArrayList<Object> students = feignRepository.getStudentsForCoursePdf(id);
 			Course course = feignRepository.getOneCourse(id);
 
 			Resource resource = appContext.getResource("classpath:/reports/studentsForCourse.jrxml");
