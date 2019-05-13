@@ -6,6 +6,7 @@
 * [Frontend](#frontend)
 * [Running](#running)
 * [Screenshots](#screenshots)
+* [Directions for further development](#directions-for-further-development)
 
 ## Application
 
@@ -106,3 +107,10 @@ You will also need to provide some CORS plugin for your browser.
 ![](frontend/src/assets/6.PNG?raw=true) 
 
 ![](frontend/src/assets/7.PNG?raw=true)  
+
+## Directions for further development  
+#### In progress:
+
+* Spring security
+* Docker
+* AWS
