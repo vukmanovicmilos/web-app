@@ -2,7 +2,10 @@
 
 ## Application
 
-This example show application for keeping records of courses, students and teachers.
+This example show application for keeping records of courses, students and teachers.  
+Relational database schema:  
+
+![](frontend/src/assets/schema.jpg?raw=true?style=centerme)
 
 ## Architecture
 The application is divided into two basic sections, a backend (Spring boot 2.1 microservices) and a frontend (Angular 7). 
