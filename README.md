@@ -82,7 +82,9 @@ ng serve -o
 ```
 You will also need to provide some CORS plugin for your browser.  
 
-##Screenshots
+## Screenshots
+
+**[Report generated from app](frontend/src/assets/report.pdf)**   
 
 ![](frontend/src/assets/1.PNG?raw=true) 
 
@@ -96,6 +98,4 @@ You will also need to provide some CORS plugin for your browser.
 
 ![](frontend/src/assets/6.PNG?raw=true) 
 
-![](frontend/src/assets/7.PNG?raw=true) 
-
-[Report](frontend/src/assets/report.pdf)  
+![](frontend/src/assets/7.PNG?raw=true)  
