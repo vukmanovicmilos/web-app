@@ -80,7 +80,7 @@ Requirement:
 * [nodejs](https://nodejs.org/en/download/) 
 * [Visual Studio Code](https://code.visualstudio.com/download)  
 
-To start the backend, start the microservices from STS in the order shown on the application architecture.
+To start the backend, start the microservices from STS in the order shown on the application architecture.  
 To start the frontend, run the following commands in VSC:
 
 ```shell
