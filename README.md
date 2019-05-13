@@ -1,5 +1,12 @@
 # Angular 7 + Spring boot 2.1 microservices + PostgreSQL 10
 
+## Table of contents
+* [Application](#application)
+* [Backend](#backend)
+* [Frontend](#frontend)
+* [Running](#running)
+* [Screenshots](#screenshots)
+
 ## Application
 
 This example show application for keeping records of courses, students and teachers.  
