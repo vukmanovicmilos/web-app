@@ -15,12 +15,21 @@ import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 
 /**
  * The persistent class for the student database table.
  * 
  */
 @Entity
+@Getter 
+@Setter 
+@NoArgsConstructor
+@ToString(includeFieldNames=true)
 @NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
 public class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -51,48 +60,5 @@ public class Student implements Serializable {
 			}
 		)
 	private List<Course> courses;
-
-	public Student() {
-	}
-
-	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	public String getIndexNumber() {
-		return this.indexNumber;
-	}
-
-	public void setIndexNumber(String indexNumber) {
-		this.indexNumber = indexNumber;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public List<Course> getCourses() {
-		return this.courses;
-	}
-
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
-	}
 
 }

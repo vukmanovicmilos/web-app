@@ -5,6 +5,11 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +19,10 @@ import java.util.List;
  * 
  */
 @Entity
+@Getter 
+@Setter 
+@NoArgsConstructor
+@ToString(includeFieldNames=true)
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
 public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -39,56 +48,5 @@ public class Course implements Serializable {
 	@JsonIgnore
 	@ManyToMany(mappedBy="courses")
 	private List<Student> students;
-
-	public Course() {
-	}
-
-	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getLabel() {
-		return this.label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Date getStartDate() {
-		return this.startDate;
-	}
-
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-
-	public Teacher getTeacher() {
-		return this.teacher;
-	}
-
-	public void setTeacher(Teacher teacher) {
-		this.teacher = teacher;
-	}
-
-	public List<Student> getStudents() {
-		return this.students;
-	}
-
-	public void setStudents(List<Student> students) {
-		this.students = students;
-	}
 
 }

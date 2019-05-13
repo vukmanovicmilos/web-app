@@ -17,12 +17,21 @@ import org.hibernate.annotations.Type;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 
 /**
  * The persistent class for the teacher database table.
  * 
  */
 @Entity
+@Getter 
+@Setter 
+@NoArgsConstructor
+@ToString(includeFieldNames=true)
 @NamedQuery(name="Teacher.findAll", query="SELECT t FROM Teacher t")
 public class Teacher implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -50,70 +59,5 @@ public class Teacher implements Serializable {
 	@JsonIgnore
 	@OneToMany(mappedBy="teacher")
 	private List<Course> courses;
-
-	public Teacher() {
-	}
-
-	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public byte[] getPicture() {
-		return this.picture;
-	}
-
-	public void setPicture(byte[] picture) {
-		this.picture = picture;
-	}
-
-	public String getTitle() {
-		return this.title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public List<Course> getCourses() {
-		return this.courses;
-	}
-
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
-	}
-
-	public Course addCours(Course cours) {
-		getCourses().add(cours);
-		cours.setTeacher(this);
-
-		return cours;
-	}
-
-	public Course removeCours(Course cours) {
-		getCourses().remove(cours);
-		cours.setTeacher(null);
-
-		return cours;
-	}
 
 }
