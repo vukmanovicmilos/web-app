@@ -24,12 +24,12 @@ There are a few microservices:
 This microservice provides basic create, read, update, and delete (CRUD) operations.  
 Faculty microservice use [Spring Data JPA](https://spring.io/projects/spring-data-jpa#overview) to store and retrieve data in a 
 relational database ([PostgreSQL](https://www.postgresql.org/)) with provided pagination for GET method.  
-
 [Lombok](https://www.baeldung.com/intro-to-project-lombok) is a library which facilitates many tedious tasks and it reduce 
 Java source code verbosity (no need for getters, setters and constructors).  
 [Swagger](https://swagger.io/) offers the most powerful and easiest to use tools to take full advantage of the OpenAPI Specification 
 (document, test).  
-![](frontend/src/assets/6.PNG)
+
+![](frontend/src/assets/6.PNG?raw=true)
 
 ### Report  
 This microservice generate a report and comunicate with faculty microservice.  
@@ -46,7 +46,8 @@ Properties can be stored in a local file, a git repository or a git cloud reposi
 ### Eureka  
 This microservice ([Client-side service discovery](https://www.baeldung.com/spring-cloud-netflix-eureka)) allows microservices to find and communicate with each other without hard-coding hostname and port.
 Each microservice is registered with this microservice during startup.  
-![](frontend/src/assets/7.PNG)
+
+![](frontend/src/assets/7.PNG?raw=true)
 
 ### Zuul  
 This microservice ([Zuul Api Gateway](https://spring.io/guides/gs/routing-and-filtering/)) is a gateway application that handles all the requests and performs dynamic routing of microservice applications.
