@@ -3,14 +3,16 @@
 ## Application
 
 This example show application for keeping records of courses, students and teachers.  
-Relational database schema:  
 
-![](frontend/src/assets/schema.jpg?raw=true?style=centerme)
 
 ## Architecture
 The application is divided into two basic sections, a backend (Spring boot 2.1 microservices) and a frontend (Angular 7). 
 
-![](frontend/src/assets/background.png?raw=true)
+![](frontend/src/assets/background.png?raw=true)  
+
+Relational database schema:  
+
+![](frontend/src/assets/schema.jpg?raw=true?style=centerme)
 
 ## Backend
 
@@ -57,6 +59,13 @@ This microservice ([Zuul Api Gateway](https://spring.io/guides/gs/routing-and-fi
 
 
 ## Frontend
+
+Frontend side is Angular 7 application with [Angular Material](https://material.angular.io/) theming with animations and some extra things such as open an external link in new tab (for backend administration), embeded pdf file... Also, sorting, filtering and pagination is provided (pagination on the frontend and backend).  
+
+![](frontend/src/assets/1.PNG?raw=true)
+
+
+
 ```shell
 ng serve -o
 ```
