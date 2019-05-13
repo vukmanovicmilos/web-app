@@ -7,7 +7,7 @@ This example show application for keeping records of courses, students and teach
 ## Architecture
 The application is divided into two basic sections, a backend (Spring boot 2.1 microservices) and a frontend (Angular 7). 
 
-![architecture](link)
+![](frontend/src/assets/background.png)
 
 ## Backend
 
@@ -29,7 +29,7 @@ relational database ([PostgreSQL](https://www.postgresql.org/)) with provided pa
 Java source code verbosity (no need for getters, setters and constructors).  
 [Swagger](https://swagger.io/) offers the most powerful and easiest to use tools to take full advantage of the OpenAPI Specification 
 (document, test).  
-![swagger](link)
+![](frontend/src/assets/6.PNG)
 
 ### Report  
 This microservice generate a report and comunicate with faculty microservice.  
@@ -46,7 +46,7 @@ Properties can be stored in a local file, a git repository or a git cloud reposi
 ### Eureka  
 This microservice ([Client-side service discovery](https://www.baeldung.com/spring-cloud-netflix-eureka)) allows microservices to find and communicate with each other without hard-coding hostname and port.
 Each microservice is registered with this microservice during startup.  
-![eureka](link)
+![](frontend/src/assets/7.PNG)
 
 ### Zuul  
 This microservice ([Zuul Api Gateway](https://spring.io/guides/gs/routing-and-filtering/)) is a gateway application that handles all the requests and performs dynamic routing of microservice applications.
