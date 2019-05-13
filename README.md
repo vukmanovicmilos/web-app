@@ -64,9 +64,38 @@ Frontend side is Angular 7 application with [Angular Material](https://material.
 
 ![](frontend/src/assets/1.PNG?raw=true)
 
+## Running
 
+Requirement:
+
+* [PostgreSQL 10](https://www.postgresql.org/download/) 
+* [Spring Tool Suite 4](https://spring.io/tools) 
+* [nodejs](https://nodejs.org/en/download/) 
+* [Visual Studio Code](https://code.visualstudio.com/download)  
+
+To start the backend, start the microservices from STS in the order shown on the application architecture.
+To start the frontend, run the following commands in VSC:
 
 ```shell
+npm install
 ng serve -o
 ```
+You will also need to provide some CORS plugin for your browser.  
 
+##Screenshots
+
+![](frontend/src/assets/1.PNG?raw=true) 
+
+![](frontend/src/assets/2.PNG?raw=true) 
+
+![](frontend/src/assets/3.PNG?raw=true) 
+
+![](frontend/src/assets/4.PNG?raw=true) 
+
+![](frontend/src/assets/5.PNG?raw=true) 
+
+![](frontend/src/assets/6.PNG?raw=true) 
+
+![](frontend/src/assets/7.PNG?raw=true) 
+
+[Report](frontend/src/assets/report.pdf?raw=true)  
