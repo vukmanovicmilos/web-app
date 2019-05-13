@@ -7,7 +7,7 @@ This example show application for keeping records of courses, students and teach
 ## Architecture
 The application is divided into two basic sections, a backend (Spring boot 2.1 microservices) and a frontend (Angular 7). 
 
-![](frontend/src/assets/background.png)
+![](frontend/src/assets/background.png?raw=true)
 
 ## Backend
 
