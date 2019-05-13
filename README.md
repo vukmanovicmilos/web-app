@@ -98,4 +98,4 @@ You will also need to provide some CORS plugin for your browser.
 
 ![](frontend/src/assets/7.PNG?raw=true) 
 
-[Report](frontend/src/assets/report.pdf?raw=true)  
+[Report](frontend/src/assets/report.pdf)  
