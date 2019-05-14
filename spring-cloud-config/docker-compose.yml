@@ -1,0 +1,53 @@
+version: '3'
+services:
+  spring-cloud-config:
+    restart: always
+    image: spring-cloud-config:1.0
+    ports:
+      - 8888:8888
+    expose:
+      - "8888"
+  netflix-eureka:
+    restart: always
+    image: eureka:1.0
+    depends_on:
+      - spring-cloud-config
+    ports:
+      - 8761:8761
+    expose:
+      - "8761"
+  faculty:
+    restart: always
+    image: faculty:1.0
+    depends_on:
+      - spring-cloud-config
+      - netflix-eureka
+    ports:
+      - 9100:9100
+    expose:
+      - "9100"
+  report:
+    restart: always
+    image: report:1.0
+    depends_on:
+      - spring-cloud-config
+      - netflix-eureka
+      - faculty
+    ports:
+      - 9200:9200
+    expose:
+      - "9200"
+  zuul:
+    restart: always
+    image: zuul:1.0
+    depends_on:
+      - spring-cloud-config
+      - netflix-eureka
+      - faculty
+    ports:
+      - 8765:8765
+    expose:
+      - "8765"
+      
+      
+      

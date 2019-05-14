@@ -3,4 +3,6 @@ spring:
     name: netflix-eureka
   cloud:
     config:
-      uri: http://localhost:8888
+     #uri: http://spring-cloud-config:8888 #docker
+      uri: http://localhost:8888 
+      failFast: true
