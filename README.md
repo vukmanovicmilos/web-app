@@ -33,6 +33,8 @@ There are a few microservices:
 * eureka
 * zuul
 
+Each microservice can be built as a [Docker](https://www.docker.com/) image and assembled so that with one command it is possible to create and run all microservices from the configuration.  
+
 ### Faculty  
 This microservice provides basic create, read, update, and delete (CRUD) operations.  
 Faculty microservice use [Spring Data JPA](https://spring.io/projects/spring-data-jpa#overview) to store and retrieve data in a 
@@ -112,5 +114,5 @@ You will also need to provide some CORS plugin for your browser.
 #### In progress:
 
 * Spring security
-* Docker
+* Spring profiles
 * AWS
