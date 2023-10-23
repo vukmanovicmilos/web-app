@@ -1,0 +1,29 @@
+server:
+  port: 9100
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/master.xml
+    contexts: ddl,init-data
+
+springdoc:
+  swagger-ui:
+    groups-order: asc
+    operations-sorter: method
+    tags-sorter: alpha
+    doc-expansion: none
+    display-request-duration: true
+    filter: ""
+    path: /

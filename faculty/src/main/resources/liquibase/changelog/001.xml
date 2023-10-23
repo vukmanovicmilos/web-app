@@ -1,0 +1,71 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <changeSet author="milos.vukmanovic" id="001-1" context="ddl">
+        <createTable tableName="course">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="course_pkey"/>
+            </column>
+            <column name="label" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="start_date" type="date"/>
+            <column name="teacher_id" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-2" context="ddl">
+        <createTable tableName="enrollment">
+            <column name="student_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="course_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-3" context="ddl">
+        <createTable tableName="student">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="student_pkey"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="index_number" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-4" context="ddl">
+        <createTable tableName="teacher">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="teacher_pkey"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="picture" type="BYTEA"/>
+            <column name="title" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-5" context="ddl">
+        <addForeignKeyConstraint baseColumnNames="course_id" baseTableName="enrollment"
+                                 constraintName="fk_enrollment_course"
+                                 referencedColumnNames="id" referencedTableName="course" validate="true"/>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-6" context="ddl">
+        <addForeignKeyConstraint baseColumnNames="teacher_id" baseTableName="course"
+                                 constraintName="fk_course_teacher"
+                                 referencedColumnNames="id" referencedTableName="teacher" validate="true"/>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-7" context="ddl">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="enrollment"
+                                 constraintName="fk_enrollment_student"
+                                 referencedColumnNames="id" referencedTableName="student" validate="true"/>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-8" context="ddl">
+        <createSequence sequenceName="course_seq" startValue="101"/>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-9" context="ddl">
+        <createSequence sequenceName="student_seq" startValue="101"/>
+    </changeSet>
+    <changeSet author="milos.vukmanovic" id="001-10" context="ddl">
+        <createSequence sequenceName="teacher_seq" startValue="101"/>
+    </changeSet>
+</databaseChangeLog>
