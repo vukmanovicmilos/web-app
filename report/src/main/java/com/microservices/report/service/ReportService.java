@@ -29,6 +29,7 @@ import java.util.Map;
 public class ReportService {
     private final FacultyFeignProxy facultyFeignProxy;
     private final ApplicationContext appContext;
+    private final OpenAIService openAIService;
 
     public void getStudentsForCourseReport(@PathVariable("courseId") Integer courseId) {
         facultyFeignProxy.getStudentsForCourseReport(courseId);
@@ -58,6 +59,7 @@ public class ReportService {
         if (course.getTeacher().getPicture() != null) {
             img = ImageIO.read(new ByteArrayInputStream(course.getTeacher().getPicture()));
         }
+        params.put("summary", openAIService.getSummary(params));
         params.put("teacherPicture", img);
         return params;
     }
