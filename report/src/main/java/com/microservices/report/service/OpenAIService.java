@@ -25,7 +25,7 @@ public class OpenAIService {
     private String key;
 
     public String getSummary(Map<String, Object> params) {
-        String summary = "";
+        String summary = "Default summary if openAI is not set or there is a problem";
         try {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);

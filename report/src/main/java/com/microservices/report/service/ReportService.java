@@ -30,6 +30,7 @@ public class ReportService {
     private final FacultyFeignProxy facultyFeignProxy;
     private final ApplicationContext appContext;
     private final OpenAIService openAIService;
+    private final KafkaProducerService kafkaProducerService;
 
     public void getStudentsForCourseReport(@PathVariable("courseId") Integer courseId) {
         facultyFeignProxy.getStudentsForCourseReport(courseId);
@@ -45,6 +46,9 @@ public class ReportService {
         Map<String, Object> params = getParams(course);
 
         generateReportPDF(httpServletResponse, jasperReport, dataSource, params);
+
+        course.setSummary(String.valueOf(params.get("summary")));
+        kafkaProducerService.sendMessage(course);
     }
 
     private Map<String, Object> getParams(CourseDto course) throws IOException {

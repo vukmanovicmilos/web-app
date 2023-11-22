@@ -17,4 +17,5 @@ public class CourseDto {
     private String name;
     private Date startDate;
     private TeacherDto teacher;
+    private String summary;
 }

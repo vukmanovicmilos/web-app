@@ -1,6 +1,12 @@
 spring:
   application:
     name: report
+  kafka:
+    topic:
+      name: microservices
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:
   port: 9200
 springdoc:

@@ -28,6 +28,8 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     depends_on:
       - zookeeper
+    ports:
+      - "9093:9093"
 
   kafka3:
     image: confluentinc/cp-kafka:latest
@@ -39,3 +41,5 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     depends_on:
       - zookeeper
+    ports:
+      - "9094:9094"
