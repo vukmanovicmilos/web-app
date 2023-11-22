@@ -3,6 +3,9 @@ spring:
     name: spring-cloud-config
   profiles:
     active: native
+  kafka:
+    topic:
+      name: microservices
 server:
   port: 8888
 eureka:
