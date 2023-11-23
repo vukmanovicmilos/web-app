@@ -1,7 +1,6 @@
 package com.microservices.report.service;
 
 
-import com.microservices.report.dto.CourseDto;
 import com.microservices.report.dto.CourseSummaryDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
