@@ -20,6 +20,19 @@ spring:
     change-log: classpath:liquibase/master.xml
     contexts: ddl,init-data
 
+  kafka:
+    topic:
+      name: microservices
+    consumer:
+      bootstrap-servers:
+        - localhost:9092
+      group-id: myGroup
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: earliest
+      properties:
+        spring.json.trusted.packages: '*'
+        
 springdoc:
   swagger-ui:
     groups-order: asc

@@ -4,7 +4,9 @@ spring:
   profiles:
     active: native
   kafka:
-    bootstrap-servers: kafka1:9092,kafka2:9093,kafka3:9094
+    admin:
+      auto-create: true
+    bootstrap-servers: localhost:9092
     topic:
       name: microservices
 server:

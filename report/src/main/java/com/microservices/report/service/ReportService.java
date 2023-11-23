@@ -1,6 +1,7 @@
 package com.microservices.report.service;
 
 import com.microservices.report.dto.CourseDto;
+import com.microservices.report.dto.CourseSummaryDto;
 import com.microservices.report.dto.StudentDto;
 import com.microservices.report.feign.FacultyFeignProxy;
 import jakarta.servlet.ServletOutputStream;
@@ -47,8 +48,12 @@ public class ReportService {
 
         generateReportPDF(httpServletResponse, jasperReport, dataSource, params);
 
-        course.setSummary(String.valueOf(params.get("summary")));
-        kafkaProducerService.sendMessage(course);
+
+        CourseSummaryDto courseSummary = CourseSummaryDto.builder()
+                .id(courseId)
+                .summary(String.valueOf(params.get("summary")))
+                .build();
+        kafkaProducerService.sendMessage(courseSummary);
     }
 
     private Map<String, Object> getParams(CourseDto course) throws IOException {
