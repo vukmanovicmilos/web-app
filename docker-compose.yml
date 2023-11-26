@@ -1,0 +1,166 @@
+version: '2.23.3'
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - microservices:/var/lib/postgresql/data
+    networks:
+      - ms-network
+
+  zookeeper:
+    image: wurstmeister/zookeeper:3.4.6
+    ports:
+      - "2181:2181"
+    networks:
+      - ms-network
+
+  kafka1:
+    image: confluentinc/cp-kafka:latest
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092  # Use service name
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    networks:
+      - ms-network
+
+  eureka-ms:
+    build:
+      context: ./eureka
+      dockerfile: Dockerfile
+    image: eureka-ms:latest
+    restart: unless-stopped
+    ports:
+      - "8761:8761"
+    networks:
+      - ms-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://eureka-ms:8761/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+  config-ms:
+    build:
+      context: ./config
+      dockerfile: Dockerfile
+    image: config-ms:latest
+    restart: unless-stopped
+    ports:
+      - "8888:8888"
+    depends_on:
+      kafka1:
+        condition: service_started
+      eureka-ms:
+        condition: service_healthy
+    networks:
+      - ms-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka1:9092
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://config-ms:8888/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+  api-gateway-ms:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    image: api-gateway:latest
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    depends_on:
+      config-ms:
+        condition: service_healthy
+      eureka-ms:
+        condition: service_healthy
+    networks:
+      - ms-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
+      - CONFIG_SERVER=configserver:http://config-ms:8888
+      - SPRING_APPLICATION_NAME=api-gateway
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://api-gateway-ms:8765/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+  faculty-ms:
+    build:
+      context: ./faculty
+      dockerfile: Dockerfile
+    image: faculty:latest
+    restart: unless-stopped
+    ports:
+      - "9100:9100"
+    depends_on:
+      config-ms:
+        condition: service_healthy
+      eureka-ms:
+        condition: service_healthy
+    networks:
+      - ms-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
+      - CONFIG_SERVER=configserver:http://config-ms:8888
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka1:9092
+      - SPRING_APPLICATION_NAME=faculty
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://faculty-ms:9100/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+  report-ms:
+    build:
+      context: ./report
+      dockerfile: Dockerfile
+    image: report:latest
+    restart: unless-stopped
+    ports:
+      - "9200:9200"
+    depends_on:
+      config-ms:
+        condition: service_healthy
+      eureka-ms:
+        condition: service_healthy
+      faculty-ms:
+        condition: service_healthy
+    networks:
+      - ms-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
+      - CONFIG_SERVER=configserver:http://config-ms:8888
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka1:9092
+      - SPRING_APPLICATION_NAME=report
+      - OPENAI_API_KEY=<YOUR_API_KEY>
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://report-ms:9200/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+volumes:
+  microservices:
+
+networks:
+  ms-network:
+    driver: bridge
