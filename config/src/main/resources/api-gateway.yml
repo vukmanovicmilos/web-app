@@ -31,3 +31,8 @@ eureka:
 logging:
   level:
     org.springframework.cloud.gateway.handler.RoutePredicateHandlerMapping: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

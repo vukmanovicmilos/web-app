@@ -35,3 +35,8 @@ openai:
   api:
     url: https://api.openai.com/v1/chat/completions
     key: <your api key>
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
