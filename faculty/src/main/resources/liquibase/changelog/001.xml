@@ -31,6 +31,8 @@
             <column name="first_name" type="VARCHAR(255)"/>
             <column name="last_name" type="VARCHAR(255)"/>
             <column name="index_number" type="VARCHAR(255)"/>
+            <column name="grade" type="DECIMAL"/>
+            <column name="description" type="VARCHAR(2000)"/>
         </createTable>
     </changeSet>
     <changeSet author="milos.vukmanovic" id="001-4" context="ddl">
