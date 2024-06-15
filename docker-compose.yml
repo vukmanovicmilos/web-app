@@ -2,6 +2,7 @@ version: '2.23.3'
 
 services:
   postgres:
+    container_name: postgres
     image: postgres:16
     restart: unless-stopped
     environment:
@@ -15,19 +16,21 @@ services:
       - ms-network
 
   zookeeper:
+    container_name: zookeeper
     image: wurstmeister/zookeeper:3.4.6
     ports:
       - "2181:2181"
     networks:
       - ms-network
 
-  kafka1:
+  kafka:
+    container_name: kafka
     image: confluentinc/cp-kafka:latest
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_LISTENERS: PLAINTEXT://:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092  # Use service name
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092  # Use service name
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
@@ -38,6 +41,7 @@ services:
       - ms-network
 
   eureka-ms:
+    container_name: eureka-ms
     build:
       context: ./eureka
       dockerfile: Dockerfile
@@ -54,6 +58,7 @@ services:
       retries: 100
 
   config-ms:
+    container_name: config-ms
     build:
       context: ./config
       dockerfile: Dockerfile
@@ -62,7 +67,7 @@ services:
     ports:
       - "8888:8888"
     depends_on:
-      kafka1:
+      kafka:
         condition: service_started
       eureka-ms:
         condition: service_healthy
@@ -70,7 +75,7 @@ services:
       - ms-network
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
-      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka1:9092
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://config-ms:8888/actuator/health" ]
       interval: 1s
@@ -78,6 +83,7 @@ services:
       retries: 100
 
   api-gateway-ms:
+    container_name: api-gateway-ms
     build:
       context: ./api-gateway
       dockerfile: Dockerfile
@@ -103,6 +109,7 @@ services:
       retries: 100
 
   faculty-ms:
+    container_name: faculty-ms
     build:
       context: ./faculty
       dockerfile: Dockerfile
@@ -121,7 +128,7 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
       - CONFIG_SERVER=configserver:http://config-ms:8888
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
-      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka1:9092
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
       - SPRING_APPLICATION_NAME=faculty
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://faculty-ms:9100/actuator/health" ]
@@ -130,6 +137,7 @@ services:
       retries: 100
 
   report-ms:
+    container_name: report-ms
     build:
       context: ./report
       dockerfile: Dockerfile
@@ -149,9 +157,9 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
       - CONFIG_SERVER=configserver:http://config-ms:8888
-      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka1:9092
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
       - SPRING_APPLICATION_NAME=report
-      - OPENAI_API_KEY=<YOUR_API_KEY>
+      - SPRING_AI_OPENAI_API_KEY=<YOUR_API_KEY>
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://report-ms:9200/actuator/health" ]
       interval: 1s
