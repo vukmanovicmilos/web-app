@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: open-ai
+  config:
+    import: ${CONFIG_SERVER:configserver:http://localhost:8888}

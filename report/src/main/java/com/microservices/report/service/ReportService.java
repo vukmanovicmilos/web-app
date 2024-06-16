@@ -2,8 +2,10 @@ package com.microservices.report.service;
 
 import com.microservices.report.dto.CourseDto;
 import com.microservices.report.dto.CourseSummaryDto;
+import com.microservices.report.dto.CourseSummaryRequestDto;
 import com.microservices.report.dto.StudentDto;
 import com.microservices.report.feign.FacultyFeignProxy;
+import com.microservices.report.feign.OpenAIFeignProxy;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +32,7 @@ import java.util.Map;
 public class ReportService {
     private final FacultyFeignProxy facultyFeignProxy;
     private final ApplicationContext appContext;
-    private final OpenAIService openAIService;
+    private final OpenAIFeignProxy openAIFeignProxy;
     private final KafkaProducerService kafkaProducerService;
 
     public void getStudentsForCourseReport(@PathVariable("courseId") Integer courseId) {
@@ -68,9 +70,18 @@ public class ReportService {
         if (course.getTeacher().getPicture() != null) {
             img = ImageIO.read(new ByteArrayInputStream(course.getTeacher().getPicture()));
         }
-        params.put("summary", openAIService.getSummary(params));
+        params.put("summary", openAIFeignProxy.getSummary(populateCourseRequestDto(course)));
         params.put("teacherPicture", img);
         return params;
+    }
+
+    private CourseSummaryRequestDto populateCourseRequestDto(CourseDto course) {
+        return CourseSummaryRequestDto.builder()
+                .courseName(course.getName())
+                .courseDate(course.getStartDate())
+                .teacherTitle(course.getTeacher().getTitle())
+                .teacherLastName(course.getTeacher().getLastName())
+                .build();
     }
 
     private void generateReportPDF(HttpServletResponse resp, JasperReport jasperReport, JRDataSource dataSource,

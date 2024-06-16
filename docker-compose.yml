@@ -159,9 +159,35 @@ services:
       - CONFIG_SERVER=configserver:http://config-ms:8888
       - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
       - SPRING_APPLICATION_NAME=report
-      - SPRING_AI_OPENAI_API_KEY=<YOUR_API_KEY>
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://report-ms:9200/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 100
+
+  open-ai-ms:
+    container_name: open-ai-ms
+    build:
+      context: ./openAI
+      dockerfile: Dockerfile
+    image: open-ai:latest
+    restart: unless-stopped
+    ports:
+      - "9300:9300"
+    depends_on:
+      config-ms:
+        condition: service_healthy
+      eureka-ms:
+        condition: service_healthy
+    networks:
+      - ms-network
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-ms:8761/eureka
+      - CONFIG_SERVER=configserver:http://config-ms:8888
+      - SPRING_APPLICATION_NAME=open-ai
+      - SPRING_AI_OPENAI_API_KEY=<YOUR_API_KEY>
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://open-ai-ms:9300/actuator/health" ]
       interval: 1s
       timeout: 2s
       retries: 100
