@@ -1,6 +1,7 @@
 package com.microservices.faculty.controller;
 
 import com.microservices.faculty.dto.StudentRecord;
+import com.microservices.faculty.model.Student;
 import com.microservices.faculty.service.StudentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,11 +23,17 @@ public class StudentRestController {
 
     private final StudentService studentService;
 
-    @Operation(summary = "Returns all students from database")
+    @Operation(summary = "Returns page of students from database")
     @GetMapping(value = { "", "{filter}" })
     public PageImpl<StudentRecord> getStudents(@PathVariable(required = false) String filter,
                                             @PageableDefault(sort = {"id"}) Pageable page) {
             return studentService.getAll(filter, page);
+    }
+
+    @Operation(summary = "Returns all students from database")
+    @GetMapping("all")
+    public List<Student> getStudents() {
+        return studentService.findAll();
     }
 
     @Operation(summary = "Returns students enrolled to a course with an course id that is passed as a path variable")

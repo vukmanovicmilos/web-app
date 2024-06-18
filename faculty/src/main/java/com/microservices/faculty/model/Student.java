@@ -1,8 +1,10 @@
 package com.microservices.faculty.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -22,6 +24,12 @@ public class Student extends Person {
     @Column(name = "index_number")
     private String indexNumber;
 
+    @Column(name = "grade")
+    private BigDecimal grade;
+
+    @Column(name = "description")
+    private String description;
+
     //bi-directional many-to-many association to Course
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -33,6 +41,6 @@ public class Student extends Person {
                     @JoinColumn(name = "course_id")
             }
     )
+    @JsonIgnore
     private List<Course> courses;
-
 }

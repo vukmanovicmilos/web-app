@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Component
 public class StudentMapper {
     public StudentRecord entityToDTO(Student student) {
-        return new StudentRecord(student.getId(), student.getIndexNumber(), student.getFirstName(), student.getLastName());
+        return new StudentRecord(student.getId(), student.getIndexNumber(), student.getFirstName(), student.getLastName(), student.getGrade(), student.getDescription());
     }
 
     public List<StudentRecord> entitiesToDTOs(Collection<Student> students) {

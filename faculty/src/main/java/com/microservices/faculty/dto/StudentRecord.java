@@ -1,4 +1,6 @@
 package com.microservices.faculty.dto;
 
-public record StudentRecord(Integer id, String indexNumber, String firstName, String lastName) {
+import java.math.BigDecimal;
+
+public record StudentRecord(Integer id, String indexNumber, String firstName, String lastName, BigDecimal grade, String description) {
 }

@@ -25,6 +25,10 @@ public class StudentService {
         return new PageImpl<>(studentMapper.entitiesToDTOs(students.getContent()), page, students.getTotalElements());
     }
 
+    public List<Student> findAll() {
+       return studentRepository.findAll();
+    }
+
     public PageImpl<StudentRecord> findByCourse(Integer id, Pageable page) {
         Page<Student> students = studentRepository.findByCourses_IdOrderByLastName(id, page);
         return new PageImpl<>(studentMapper.entitiesToDTOs(students.getContent()), page, students.getTotalElements());

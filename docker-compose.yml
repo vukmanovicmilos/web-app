@@ -9,9 +9,21 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - microservices:/var/lib/postgresql/data
+    networks:
+      - ms-network
+
+  pg-vector:
+    container_name: pg-vector
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: rag
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5435:5432"
     networks:
       - ms-network
 

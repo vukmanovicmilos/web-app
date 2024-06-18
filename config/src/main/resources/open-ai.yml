@@ -7,6 +7,16 @@ spring:
       chat:
         options:
           model: gpt-4o
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/rag
+    username: postgres
+    password: postgres
+  vectorstore:
+    pgvector:
+    index-type: HNSW
+    distance-type: COSINE_DISTANCE
+    dimension: 1536
 server:
   port: 9300
 springdoc:

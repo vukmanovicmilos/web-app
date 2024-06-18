@@ -32,8 +32,7 @@
             <column name="last_name" value="Bruce"/>
             <column name="index_number" value="MS 1/2023"/>
             <column name="grade" valueNumeric="4.13"/>
-            <column name="description"
-                    value="Giselle enjoys reading historical fiction novels, hiking in the mountains, painting landscapes, experimenting with new recipes in the kitchen, and practicing yoga for relaxation."/>
+            <column name="description" value="Giselle enjoys reading historical novels and hiking in the mountains."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="2"/>
@@ -41,8 +40,7 @@
             <column name="last_name" value="Harrell"/>
             <column name="index_number" value="MS 2/2023"/>
             <column name="grade" valueNumeric="3.92"/>
-            <column name="description"
-                    value="Gay loves cycling through scenic routes, drawing portraits, gardening a variety of flowers, baking homemade bread, and exploring new countries during vacations."/>
+            <column name="description" value="Gay loves cycling through scenic routes and drawing portraits."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="3"/>
@@ -50,8 +48,7 @@
             <column name="last_name" value="Downs"/>
             <column name="index_number" value="MS 3/2023"/>
             <column name="grade" valueNumeric="3.57"/>
-            <column name="description"
-                    value="Avye spends time swimming at the local pool, writing short stories, birdwatching in the countryside, knitting scarves and sweaters, and running in marathons."/>
+            <column name="description" value="Avye spends time swimming at the local pool and writing short stories."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="4"/>
@@ -59,8 +56,7 @@
             <column name="last_name" value="Weeks"/>
             <column name="index_number" value="MS 4/2023"/>
             <column name="grade" valueNumeric="4.23"/>
-            <column name="description"
-                    value="Candice enjoys playing the guitar, attending painting classes, traveling to historical sites, practicing mindfulness meditation, and participating in community theater."/>
+            <column name="description" value="Candice enjoys playing the guitar and attending painting classes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="5"/>
@@ -69,7 +65,7 @@
             <column name="index_number" value="MS 5/2023"/>
             <column name="grade" valueNumeric="3.79"/>
             <column name="description"
-                    value="Oscar is passionate about rock climbing, learning foreign languages, playing chess, volunteering at animal shelters, and brewing craft beer."/>
+                    value="Oscar is passionate about learning foreign languages and volunteering at animal shelters."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="6"/>
@@ -77,8 +73,7 @@
             <column name="last_name" value="Whitley"/>
             <column name="index_number" value="MS 6/2023"/>
             <column name="grade" valueNumeric="3.99"/>
-            <column name="description"
-                    value="Althea loves taking ballet classes, creating pottery, photographing nature, solving jigsaw puzzles, and hiking on weekends."/>
+            <column name="description" value="Althea loves taking ballet classes and creating pottery."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="7"/>
@@ -86,8 +81,7 @@
             <column name="last_name" value="Fox"/>
             <column name="index_number" value="MS 7/2023"/>
             <column name="grade" valueNumeric="4.01"/>
-            <column name="description"
-                    value="Patricia enjoys writing poetry, practicing archery, growing herbs in her garden, cooking gourmet meals, and going on weekend camping trips."/>
+            <column name="description" value="Patricia enjoys writing poetry and practicing archery."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="8"/>
@@ -96,7 +90,7 @@
             <column name="index_number" value="MS 8/2023"/>
             <column name="grade" valueNumeric="4.19"/>
             <column name="description"
-                    value="Aphrodite spends her time playing the violin, hiking through forests, creating digital art, learning about astronomy, and practicing yoga daily."/>
+                    value="Aphrodite spends her time playing the violin and hiking through forests."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="9"/>
@@ -104,8 +98,7 @@
             <column name="last_name" value="Dickerson"/>
             <column name="index_number" value="MS 9/2023"/>
             <column name="grade" valueNumeric="4.48"/>
-            <column name="description"
-                    value="Quinn loves practicing martial arts, reading science fiction, building model airplanes, participating in hackathons, and birdwatching in local parks."/>
+            <column name="description" value="Quinn loves practicing martial arts and reading science fiction."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="10"/>
@@ -113,8 +106,7 @@
             <column name="last_name" value="Benjamin"/>
             <column name="index_number" value="MS 10/2023"/>
             <column name="grade" valueNumeric="4.56"/>
-            <column name="description"
-                    value="Neil enjoys playing the piano, hiking in the mountains, drawing comics, practicing coding, and engaging in community service projects."/>
+            <column name="description" value="Neil enjoys playing the piano and hiking in the mountains."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="11"/>
@@ -122,8 +114,7 @@
             <column name="last_name" value="Butler"/>
             <column name="index_number" value="MS 11/2023"/>
             <column name="grade" valueNumeric="4.38"/>
-            <column name="description"
-                    value="David loves woodworking, flying drones, reading biographies, experimenting with electronics, and practicing tai chi."/>
+            <column name="description" value="David loves woodworking and flying drones."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="12"/>
@@ -131,8 +122,7 @@
             <column name="last_name" value="Reeves"/>
             <column name="index_number" value="MS 12/2023"/>
             <column name="grade" valueNumeric="4.53"/>
-            <column name="description"
-                    value="Harding enjoys sailing, painting watercolor landscapes, playing badminton, writing short stories, and restoring vintage cars."/>
+            <column name="description" value="Harding enjoys sailing and painting watercolor landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="13"/>
@@ -140,8 +130,7 @@
             <column name="last_name" value="Anderson"/>
             <column name="index_number" value="MS 13/2023"/>
             <column name="grade" valueNumeric="3.86"/>
-            <column name="description"
-                    value="Desirae loves playing basketball, baking desserts, volunteering at local shelters, practicing photography, and doing yoga."/>
+            <column name="description" value="Desirae loves playing basketball and baking desserts."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="14"/>
@@ -149,8 +138,7 @@
             <column name="last_name" value="Holmes"/>
             <column name="index_number" value="MS 14/2023"/>
             <column name="grade" valueNumeric="4.31"/>
-            <column name="description"
-                    value="Leah enjoys reading mystery novels, learning to play the guitar, painting murals, hiking in national parks, and practicing pilates."/>
+            <column name="description" value="Leah enjoys reading mystery novels and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="15"/>
@@ -158,8 +146,7 @@
             <column name="last_name" value="Carlson"/>
             <column name="index_number" value="MS 15/2023"/>
             <column name="grade" valueNumeric="3.94"/>
-            <column name="description"
-                    value="Knox enjoys skateboarding, playing video games, coding apps, participating in community cleanups, and learning magic tricks."/>
+            <column name="description" value="Knox enjoys skateboarding and coding apps."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="16"/>
@@ -167,8 +154,7 @@
             <column name="last_name" value="Campbell"/>
             <column name="index_number" value="MS 16/2023"/>
             <column name="grade" valueNumeric="3.79"/>
-            <column name="description"
-                    value="Kaden spends time playing soccer, building models, exploring nature trails, cooking international cuisines, and learning graphic design."/>
+            <column name="description" value="Kaden spends time playing soccer and building models."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="17"/>
@@ -176,8 +162,7 @@
             <column name="last_name" value="Rios"/>
             <column name="index_number" value="MS 17/2023"/>
             <column name="grade" valueNumeric="4.28"/>
-            <column name="description"
-                    value="Stacy enjoys practicing ballet, knitting sweaters, reading romance novels, visiting art museums, and hiking with friends."/>
+            <column name="description" value="Stacy enjoys practicing ballet and knitting sweaters."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="18"/>
@@ -185,8 +170,7 @@
             <column name="last_name" value="Keith"/>
             <column name="index_number" value="MS 18/2023"/>
             <column name="grade" valueNumeric="3.67"/>
-            <column name="description"
-                    value="Ramona loves horseback riding, baking pastries, learning new languages, playing chess, and going on road trips."/>
+            <column name="description" value="Ramona loves horseback riding and baking pastries."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="19"/>
@@ -194,8 +178,7 @@
             <column name="last_name" value="Webster"/>
             <column name="index_number" value="MS 19/2023"/>
             <column name="grade" valueNumeric="3.96"/>
-            <column name="description"
-                    value="Ahmed enjoys playing soccer, watching documentaries, cooking traditional recipes, practicing photography, and hiking in the wilderness."/>
+            <column name="description" value="Ahmed enjoys playing soccer and watching documentaries."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="20"/>
@@ -203,8 +186,7 @@
             <column name="last_name" value="Kramer"/>
             <column name="index_number" value="MS 20/2023"/>
             <column name="grade" valueNumeric="4.41"/>
-            <column name="description"
-                    value="Kimberley loves painting, playing the piano, practicing yoga, cooking Italian dishes, and gardening on weekends."/>
+            <column name="description" value="Kimberley loves painting and playing the piano."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="21"/>
@@ -212,8 +194,7 @@
             <column name="last_name" value="Galloway"/>
             <column name="index_number" value="MS 21/2023"/>
             <column name="grade" valueNumeric="4.65"/>
-            <column name="description"
-                    value="Ima spends her time writing poetry, volunteering at animal shelters, hiking in national parks, practicing meditation, and learning to play the violin."/>
+            <column name="description" value="Ima spends her time writing poetry and volunteering at animal shelters."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="22"/>
@@ -222,7 +203,7 @@
             <column name="index_number" value="MS 22/2023"/>
             <column name="grade" valueNumeric="4.53"/>
             <column name="description"
-                    value="Hashim enjoys playing basketball, exploring virtual reality games, learning coding, hiking in the mountains, and cooking international dishes."/>
+                    value="Hashim enjoys exploring virtual reality games and cooking international dishes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="23"/>
@@ -230,8 +211,7 @@
             <column name="last_name" value="Clark"/>
             <column name="index_number" value="MS 23/2023"/>
             <column name="grade" valueNumeric="4.11"/>
-            <column name="description"
-                    value="Ora loves singing in the choir, drawing portraits, practicing yoga, exploring hiking trails, and baking cookies."/>
+            <column name="description" value="Ora loves singing in the choir and drawing portraits."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="24"/>
@@ -239,8 +219,7 @@
             <column name="last_name" value="Downs"/>
             <column name="index_number" value="MS 24/2023"/>
             <column name="grade" valueNumeric="4.21"/>
-            <column name="description"
-                    value="Callum enjoys rock climbing, playing guitar, cooking gourmet meals, traveling to historical places, and learning about astronomy."/>
+            <column name="description" value="Callum enjoys rock climbing and playing guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="25"/>
@@ -248,8 +227,7 @@
             <column name="last_name" value="Odonnell"/>
             <column name="index_number" value="MS 25/2023"/>
             <column name="grade" valueNumeric="4.16"/>
-            <column name="description"
-                    value="Rachel loves swimming in the ocean, painting seascapes, playing chess, hiking through forests, and baking cupcakes."/>
+            <column name="description" value="Rachel loves swimming in the ocean and painting seascapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="26"/>
@@ -257,8 +235,7 @@
             <column name="last_name" value="Morrow"/>
             <column name="index_number" value="MS 26/2023"/>
             <column name="grade" valueNumeric="3.98"/>
-            <column name="description"
-                    value="Winter enjoys snowboarding, crafting jewelry, reading mystery novels, exploring caves, and cooking vegan dishes."/>
+            <column name="description" value="Winter enjoys snowboarding and crafting jewelry."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="27"/>
@@ -266,8 +243,7 @@
             <column name="last_name" value="Mcbride"/>
             <column name="index_number" value="MS 27/2023"/>
             <column name="grade" valueNumeric="4.37"/>
-            <column name="description"
-                    value="Yardley enjoys playing tennis, learning photography, hiking in nature reserves, cooking exotic dishes, and practicing meditation."/>
+            <column name="description" value="Yardley enjoys playing tennis and learning photography."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="28"/>
@@ -275,8 +251,7 @@
             <column name="last_name" value="Fitzpatrick"/>
             <column name="index_number" value="MS 28/2023"/>
             <column name="grade" valueNumeric="3.99"/>
-            <column name="description"
-                    value="Zenia loves dancing salsa, painting landscapes, reading historical fiction, hiking with friends, and cooking French cuisine."/>
+            <column name="description" value="Zenia loves dancing salsa and painting landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="29"/>
@@ -284,8 +259,7 @@
             <column name="last_name" value="Marshall"/>
             <column name="index_number" value="MS 29/2023"/>
             <column name="grade" valueNumeric="4.01"/>
-            <column name="description"
-                    value="Damian enjoys playing basketball, learning to code, exploring national parks, cooking Asian dishes, and practicing guitar."/>
+            <column name="description" value="Damian enjoys playing basketball and learning to code."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="30"/>
@@ -293,8 +267,7 @@
             <column name="last_name" value="Velazquez"/>
             <column name="index_number" value="MS 30/2023"/>
             <column name="grade" valueNumeric="4.34"/>
-            <column name="description"
-                    value="Cody loves playing baseball, writing science fiction, hiking in the mountains, baking pastries, and learning to play the piano."/>
+            <column name="description" value="Cody loves playing baseball and writing science fiction."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="31"/>
@@ -302,8 +275,7 @@
             <column name="last_name" value="Henry"/>
             <column name="index_number" value="MS 31/2023"/>
             <column name="grade" valueNumeric="3.77"/>
-            <column name="description"
-                    value="Linus enjoys practicing yoga, hiking in the mountains, reading graphic novels, playing chess, and experimenting with new recipes."/>
+            <column name="description" value="Linus enjoys practicing yoga and hiking in the mountains."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="32"/>
@@ -311,8 +283,7 @@
             <column name="last_name" value="Middleton"/>
             <column name="index_number" value="MS 32/2023"/>
             <column name="grade" valueNumeric="4.36"/>
-            <column name="description"
-                    value="Irene loves practicing ballet, reading classic literature, exploring botanical gardens, baking homemade bread, and learning to play the violin."/>
+            <column name="description" value="Irene loves practicing ballet and reading classic literature."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="33"/>
@@ -320,8 +291,7 @@
             <column name="last_name" value="Newton"/>
             <column name="index_number" value="MS 33/2023"/>
             <column name="grade" valueNumeric="3.85"/>
-            <column name="description"
-                    value="Zeph enjoys playing soccer, drawing comic books, cooking Mexican dishes, hiking in nature trails, and learning about astronomy."/>
+            <column name="description" value="Zeph enjoys playing soccer and drawing comic books."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="34"/>
@@ -329,8 +299,7 @@
             <column name="last_name" value="Lynn"/>
             <column name="index_number" value="MS 34/2023"/>
             <column name="grade" valueNumeric="4.24"/>
-            <column name="description"
-                    value="Valentine loves practicing yoga, painting abstract art, exploring museums, cooking Italian cuisine, and hiking in national parks."/>
+            <column name="description" value="Valentine loves practicing yoga and painting abstract art."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="35"/>
@@ -338,8 +307,7 @@
             <column name="last_name" value="Sears"/>
             <column name="index_number" value="MS 35/2023"/>
             <column name="grade" valueNumeric="3.91"/>
-            <column name="description"
-                    value="Zoe enjoys playing the violin, painting watercolors, baking cakes, hiking with friends, and reading mystery novels."/>
+            <column name="description" value="Zoe enjoys playing the violin and painting watercolors."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="36"/>
@@ -347,8 +315,7 @@
             <column name="last_name" value="Small"/>
             <column name="index_number" value="MS 36/2023"/>
             <column name="grade" valueNumeric="3.67"/>
-            <column name="description"
-                    value="Caesar loves playing basketball, coding new software, reading graphic novels, hiking in the mountains, and baking bread."/>
+            <column name="description" value="Caesar loves playing basketball and coding new software."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="37"/>
@@ -356,8 +323,7 @@
             <column name="last_name" value="Pate"/>
             <column name="index_number" value="MS 37/2023"/>
             <column name="grade" valueNumeric="4.14"/>
-            <column name="description"
-                    value="Kane enjoys playing tennis, drawing landscapes, cooking gourmet meals, hiking in forests, and learning to play the guitar."/>
+            <column name="description" value="Kane enjoys playing tennis and drawing landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="38"/>
@@ -365,8 +331,7 @@
             <column name="last_name" value="Rodriquez"/>
             <column name="index_number" value="MS 38/2023"/>
             <column name="grade" valueNumeric="3.92"/>
-            <column name="description"
-                    value="Raymond loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and experimenting with new recipes."/>
+            <column name="description" value="Raymond loves painting and cooking gourmet meals."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="39"/>
@@ -374,8 +339,7 @@
             <column name="last_name" value="Sears"/>
             <column name="index_number" value="MS 39/2023"/>
             <column name="grade" valueNumeric="4.12"/>
-            <column name="description"
-                    value="Zachery enjoys playing the piano, painting portraits, baking cookies, hiking through forests, and learning about astronomy."/>
+            <column name="description" value="Zachery enjoys playing the piano and painting portraits."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="40"/>
@@ -383,8 +347,7 @@
             <column name="last_name" value="Douglas"/>
             <column name="index_number" value="MS 40/2023"/>
             <column name="grade" valueNumeric="4.47"/>
-            <column name="description"
-                    value="Leah loves reading historical fiction, practicing yoga, painting landscapes, baking bread, and hiking in the mountains."/>
+            <column name="description" value="Leah loves reading historical fiction and practicing yoga."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="41"/>
@@ -392,8 +355,7 @@
             <column name="last_name" value="Cortez"/>
             <column name="index_number" value="MS 41/2023"/>
             <column name="grade" valueNumeric="3.59"/>
-            <column name="description"
-                    value="Uriah enjoys playing the violin, baking cakes, hiking in national parks, reading science fiction, and practicing yoga."/>
+            <column name="description" value="Uriah enjoys playing the violin and baking cakes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="42"/>
@@ -401,8 +363,7 @@
             <column name="last_name" value="Barron"/>
             <column name="index_number" value="MS 42/2023"/>
             <column name="grade" valueNumeric="4.38"/>
-            <column name="description"
-                    value="Jonah loves playing basketball, coding software, reading biographies, hiking in nature reserves, and baking cookies."/>
+            <column name="description" value="Jonah loves coding software and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="43"/>
@@ -410,8 +371,7 @@
             <column name="last_name" value="Hayden"/>
             <column name="index_number" value="MS 43/2023"/>
             <column name="grade" valueNumeric="3.73"/>
-            <column name="description"
-                    value="Savannah enjoys practicing ballet, reading romance novels, baking pastries, hiking in the mountains, and learning to play the guitar."/>
+            <column name="description" value="Savannah enjoys practicing ballet and reading romance novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="44"/>
@@ -419,8 +379,7 @@
             <column name="last_name" value="Crane"/>
             <column name="index_number" value="MS 44/2023"/>
             <column name="grade" valueNumeric="3.92"/>
-            <column name="description"
-                    value="Evan loves playing soccer, painting watercolors, baking bread, hiking in forests, and experimenting with new recipes."/>
+            <column name="description" value="Evan loves painting watercolors and experimenting with new recipes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="45"/>
@@ -428,8 +387,7 @@
             <column name="last_name" value="Lancaster"/>
             <column name="index_number" value="MS 45/2023"/>
             <column name="grade" valueNumeric="4.33"/>
-            <column name="description"
-                    value="Chester enjoys playing baseball, reading historical fiction, baking cakes, hiking through nature trails, and learning to play the piano."/>
+            <column name="description" value="Chester enjoys reading historical fiction and baking cakes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="46"/>
@@ -437,8 +395,7 @@
             <column name="last_name" value="Howe"/>
             <column name="index_number" value="MS 46/2023"/>
             <column name="grade" valueNumeric="4.45"/>
-            <column name="description"
-                    value="Tyler loves playing tennis, painting landscapes, reading biographies, hiking in the mountains, and baking bread."/>
+            <column name="description" value="Tyler loves painting landscapes and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="47"/>
@@ -446,8 +403,7 @@
             <column name="last_name" value="Sears"/>
             <column name="index_number" value="MS 47/2023"/>
             <column name="grade" valueNumeric="4.31"/>
-            <column name="description"
-                    value="Donna enjoys playing the violin, reading mystery novels, baking cookies, hiking in national parks, and practicing yoga."/>
+            <column name="description" value="Donna enjoys playing the violin and reading mystery novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="48"/>
@@ -455,8 +411,7 @@
             <column name="last_name" value="Sullivan"/>
             <column name="index_number" value="MS 48/2023"/>
             <column name="grade" valueNumeric="4.03"/>
-            <column name="description"
-                    value="Nero loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Nero loves reading science fiction and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="49"/>
@@ -464,8 +419,7 @@
             <column name="last_name" value="White"/>
             <column name="index_number" value="MS 49/2023"/>
             <column name="grade" valueNumeric="3.89"/>
-            <column name="description"
-                    value="Lyle enjoys playing baseball, drawing comic books, baking bread, hiking through forests, and learning about astronomy."/>
+            <column name="description" value="Lyle enjoys drawing comic books and learning about astronomy."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="50"/>
@@ -473,8 +427,7 @@
             <column name="last_name" value="Maxwell"/>
             <column name="index_number" value="MS 50/2023"/>
             <column name="grade" valueNumeric="4.14"/>
-            <column name="description"
-                    value="Lacy loves playing the piano, painting seascapes, baking cookies, hiking in the mountains, and reading historical fiction."/>
+            <column name="description" value="Lacy loves playing the piano and baking cookies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="51"/>
@@ -482,8 +435,7 @@
             <column name="last_name" value="Lloyd"/>
             <column name="index_number" value="MS 51/2023"/>
             <column name="grade" valueNumeric="3.67"/>
-            <column name="description"
-                    value="Drake enjoys playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="description" value="Drake enjoys coding new software and reading graphic novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="52"/>
@@ -491,8 +443,7 @@
             <column name="last_name" value="Stein"/>
             <column name="index_number" value="MS 52/2023"/>
             <column name="grade" valueNumeric="4.26"/>
-            <column name="description"
-                    value="Serena enjoys playing tennis, painting watercolors, reading biographies, hiking in the mountains, and baking bread."/>
+            <column name="description" value="Serena loves painting watercolors and hiking in the mountains."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="53"/>
@@ -500,8 +451,7 @@
             <column name="last_name" value="Camacho"/>
             <column name="index_number" value="MS 53/2023"/>
             <column name="grade" valueNumeric="4.48"/>
-            <column name="description"
-                    value="Hector loves playing basketball, coding apps, reading science fiction, hiking in nature reserves, and baking cookies."/>
+            <column name="description" value="Hector loves playing basketball and coding apps."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="54"/>
@@ -509,8 +459,7 @@
             <column name="last_name" value="Torres"/>
             <column name="index_number" value="MS 54/2023"/>
             <column name="grade" valueNumeric="4.16"/>
-            <column name="description"
-                    value="Desiree enjoys practicing yoga, painting landscapes, reading mystery novels, hiking in forests, and baking pastries."/>
+            <column name="description" value="Desiree enjoys practicing yoga and painting landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="55"/>
@@ -518,8 +467,7 @@
             <column name="last_name" value="Workman"/>
             <column name="index_number" value="MS 55/2023"/>
             <column name="grade" valueNumeric="3.76"/>
-            <column name="description"
-                    value="Karen loves playing tennis, drawing comic books, baking bread, hiking through nature trails, and learning about astronomy."/>
+            <column name="description" value="Karen loves drawing comic books and learning about astronomy."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="56"/>
@@ -527,8 +475,7 @@
             <column name="last_name" value="Campos"/>
             <column name="index_number" value="MS 56/2023"/>
             <column name="grade" valueNumeric="4.37"/>
-            <column name="description"
-                    value="John enjoys playing soccer, coding software, reading biographies, hiking in nature reserves, and baking pastries."/>
+            <column name="description" value="John enjoys coding software and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="57"/>
@@ -536,8 +483,7 @@
             <column name="last_name" value="Mccray"/>
             <column name="index_number" value="MS 57/2023"/>
             <column name="grade" valueNumeric="4.01"/>
-            <column name="description"
-                    value="India enjoys practicing ballet, reading romance novels, baking pastries, hiking in the mountains, and learning to play the guitar."/>
+            <column name="description" value="India enjoys practicing ballet and reading romance novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="58"/>
@@ -545,8 +491,7 @@
             <column name="last_name" value="Pope"/>
             <column name="index_number" value="MS 58/2023"/>
             <column name="grade" valueNumeric="4.13"/>
-            <column name="description"
-                    value="Joshua loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Joshua loves playing the piano and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="59"/>
@@ -554,8 +499,7 @@
             <column name="last_name" value="Wallace"/>
             <column name="index_number" value="MS 59/2023"/>
             <column name="grade" valueNumeric="4.42"/>
-            <column name="description"
-                    value="Sonya enjoys playing basketball, painting watercolors, reading biographies, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Sonya loves painting watercolors and experimenting with new recipes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="60"/>
@@ -563,8 +507,7 @@
             <column name="last_name" value="Terry"/>
             <column name="index_number" value="MS 60/2023"/>
             <column name="grade" valueNumeric="4.56"/>
-            <column name="description"
-                    value="Keith loves playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="description" value="Keith enjoys reading graphic novels and hiking in nature trails."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="61"/>
@@ -572,8 +515,7 @@
             <column name="last_name" value="Phelps"/>
             <column name="index_number" value="MS 61/2023"/>
             <column name="grade" valueNumeric="4.19"/>
-            <column name="description"
-                    value="Tasha enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Tasha enjoys playing the violin and painting landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="62"/>
@@ -581,8 +523,7 @@
             <column name="last_name" value="Richmond"/>
             <column name="index_number" value="MS 62/2023"/>
             <column name="grade" valueNumeric="4.33"/>
-            <column name="description"
-                    value="Daquan enjoys playing tennis, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Daquan loves playing the guitar and hiking in nature reserves."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="63"/>
@@ -590,8 +531,7 @@
             <column name="last_name" value="Perez"/>
             <column name="index_number" value="MS 63/2023"/>
             <column name="grade" valueNumeric="4.47"/>
-            <column name="description"
-                    value="Jerry loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Jerry enjoys playing the guitar and learning about astronomy."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="64"/>
@@ -599,8 +539,7 @@
             <column name="last_name" value="Woodard"/>
             <column name="index_number" value="MS 64/2023"/>
             <column name="grade" valueNumeric="4.27"/>
-            <column name="description"
-                    value="Jameson enjoys playing basketball, reading biographies, baking cookies, hiking in the mountains, and learning to play the piano."/>
+            <column name="description" value="Jameson enjoys reading biographies and baking cookies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="65"/>
@@ -608,8 +547,7 @@
             <column name="last_name" value="Haynes"/>
             <column name="index_number" value="MS 65/2023"/>
             <column name="grade" valueNumeric="4.15"/>
-            <column name="description"
-                    value="Judah loves playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="description" value="Judah enjoys reading graphic novels and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="66"/>
@@ -617,8 +555,7 @@
             <column name="last_name" value="Bush"/>
             <column name="index_number" value="MS 66/2023"/>
             <column name="grade" valueNumeric="4.08"/>
-            <column name="description"
-                    value="Chiquita enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Chiquita loves playing the violin and baking cookies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="67"/>
@@ -626,8 +563,7 @@
             <column name="last_name" value="Pena"/>
             <column name="index_number" value="MS 67/2023"/>
             <column name="grade" valueNumeric="4.54"/>
-            <column name="description"
-                    value="Zia enjoys playing tennis, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Zia enjoys playing tennis and reading science fiction."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="68"/>
@@ -635,8 +571,7 @@
             <column name="last_name" value="Michael"/>
             <column name="index_number" value="MS 68/2023"/>
             <column name="grade" valueNumeric="4.43"/>
-            <column name="description"
-                    value="Alika enjoys playing soccer, reading science fiction novels, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Alika enjoys baking pastries and playing soccer."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="69"/>
@@ -644,8 +579,7 @@
             <column name="last_name" value="Rojas"/>
             <column name="index_number" value="MS 69/2023"/>
             <column name="grade" valueNumeric="4.48"/>
-            <column name="description"
-                    value="Derek loves playing basketball, reading biographies, baking cookies, hiking in the mountains, and learning to play the piano."/>
+            <column name="description" value="Derek loves hiking mountain trails and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="70"/>
@@ -653,8 +587,7 @@
             <column name="last_name" value="Weiss"/>
             <column name="index_number" value="MS 70/2023"/>
             <column name="grade" valueNumeric="4.14"/>
-            <column name="description"
-                    value="Duncan enjoys playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="description" value="Duncan enjoys coding new software and baking bread."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="71"/>
@@ -662,8 +595,7 @@
             <column name="last_name" value="Gould"/>
             <column name="index_number" value="MS 71/2023"/>
             <column name="grade" valueNumeric="4.21"/>
-            <column name="description"
-                    value="Chaney enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Chaney loves painting landscapes and practicing yoga."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="72"/>
@@ -671,8 +603,7 @@
             <column name="last_name" value="Stone"/>
             <column name="index_number" value="MS 72/2023"/>
             <column name="grade" valueNumeric="3.86"/>
-            <column name="description"
-                    value="Brock loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Brock loves reading science fiction and learning to play guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="73"/>
@@ -680,8 +611,7 @@
             <column name="last_name" value="Richards"/>
             <column name="index_number" value="MS 73/2023"/>
             <column name="grade" valueNumeric="3.76"/>
-            <column name="description"
-                    value="Lysandra enjoys playing basketball, painting watercolors, reading biographies, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Lysandra loves painting watercolors and baking cookies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="74"/>
@@ -689,8 +619,7 @@
             <column name="last_name" value="Dillard"/>
             <column name="index_number" value="MS 74/2023"/>
             <column name="grade" valueNumeric="3.92"/>
-            <column name="description"
-                    value="Jacqueline loves playing tennis, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Jacqueline loves drawing comic books and exploring nature trails."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="75"/>
@@ -698,8 +627,7 @@
             <column name="last_name" value="Madden"/>
             <column name="index_number" value="MS 75/2023"/>
             <column name="grade" valueNumeric="4.25"/>
-            <column name="description"
-                    value="Dominic enjoys playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="description" value="Dominic enjoys coding new software and reading graphic novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="76"/>
@@ -707,8 +635,7 @@
             <column name="last_name" value="Beasley"/>
             <column name="index_number" value="MS 76/2023"/>
             <column name="grade" valueNumeric="3.67"/>
-            <column name="description"
-                    value="Astra loves playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Astra loves painting landscapes and baking cookies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="77"/>
@@ -716,8 +643,7 @@
             <column name="last_name" value="Albert"/>
             <column name="index_number" value="MS 77/2023"/>
             <column name="grade" valueNumeric="3.86"/>
-            <column name="description"
-                    value="Joseph enjoys playing basketball, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="description" value="Joseph enjoys coding new software and reading graphic novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="78"/>
@@ -725,8 +651,7 @@
             <column name="last_name" value="Gibbs"/>
             <column name="index_number" value="MS 78/2023"/>
             <column name="grade" valueNumeric="4.45"/>
-            <column name="description"
-                    value="Edward loves playing tennis, painting watercolors, reading biographies, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Edward loves painting watercolors and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="79"/>
@@ -734,8 +659,7 @@
             <column name="last_name" value="Knowles"/>
             <column name="index_number" value="MS 79/2023"/>
             <column name="grade" valueNumeric="4.52"/>
-            <column name="description"
-                    value="Phelan enjoys playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Phelan loves playing soccer and baking pastries."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="80"/>
@@ -743,8 +667,7 @@
             <column name="last_name" value="Hooper"/>
             <column name="index_number" value="MS 80/2023"/>
             <column name="grade" valueNumeric="3.96"/>
-            <column name="description"
-                    value="Ethan loves playing basketball, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="description" value="Ethan enjoys coding new software and hiking in nature."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="81"/>
@@ -752,8 +675,7 @@
             <column name="last_name" value="Newman"/>
             <column name="index_number" value="MS 81/2023"/>
             <column name="grade" valueNumeric="3.84"/>
-            <column name="description"
-                    value="Noelani enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="description" value="Noelani enjoys painting landscapes and reading mystery novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="82"/>
@@ -761,170 +683,151 @@
             <column name="last_name" value="Hardin"/>
             <column name="index_number" value="MS 82/2023"/>
             <column name="grade" valueNumeric="4.15"/>
-            <column name="description"
-                    value="Kylynn loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="description" value="Kylynn loves baking pastries and practicing yoga."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="83"/>
-            <column name="first_name" value="Lael"/>
-            <column name="last_name" value="Rollins"/>
+            <column name="first_name" value="Brianna"/>
+            <column name="last_name" value="Nelson"/>
             <column name="index_number" value="MS 83/2023"/>
-            <column name="grade" valueNumeric="4.18"/>
-            <column name="description"
-                    value="Lael enjoys playing basketball, reading biographies, baking cookies, hiking in the mountains, and learning to play the piano."/>
+            <column name="grade" valueNumeric="4.39"/>
+            <column name="description" value="Brianna enjoys reading biographies and hiking in nature trails."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="84"/>
-            <column name="first_name" value="Abdul"/>
-            <column name="last_name" value="Mcclure"/>
+            <column name="first_name" value="Blaine"/>
+            <column name="last_name" value="Cameron"/>
             <column name="index_number" value="MS 84/2023"/>
-            <column name="grade" valueNumeric="3.87"/>
-            <column name="description"
-                    value="Abdul enjoys playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="grade" valueNumeric="4.26"/>
+            <column name="description" value="Blaine loves playing basketball and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="85"/>
-            <column name="first_name" value="Rosalyn"/>
-            <column name="last_name" value="Boone"/>
+            <column name="first_name" value="Alicia"/>
+            <column name="last_name" value="Gibson"/>
             <column name="index_number" value="MS 85/2023"/>
-            <column name="grade" valueNumeric="4.34"/>
-            <column name="description"
-                    value="Rosalyn loves playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="grade" valueNumeric="3.89"/>
+            <column name="description" value="Alicia enjoys playing tennis and painting landscapes."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="86"/>
-            <column name="first_name" value="Olympia"/>
-            <column name="last_name" value="Porter"/>
+            <column name="first_name" value="Leland"/>
+            <column name="last_name" value="Henderson"/>
             <column name="index_number" value="MS 86/2023"/>
-            <column name="grade" valueNumeric="3.92"/>
-            <column name="description"
-                    value="Olympia enjoys playing tennis, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="grade" valueNumeric="4.12"/>
+            <column name="description" value="Leland loves painting watercolors and hiking in the mountains."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="87"/>
-            <column name="first_name" value="Quentin"/>
-            <column name="last_name" value="Calhoun"/>
+            <column name="first_name" value="Jasmine"/>
+            <column name="last_name" value="Page"/>
             <column name="index_number" value="MS 87/2023"/>
-            <column name="grade" valueNumeric="3.78"/>
-            <column name="description"
-                    value="Quentin loves playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="grade" valueNumeric="4.06"/>
+            <column name="description" value="Jasmine enjoys reading science fiction and practicing yoga."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="88"/>
-            <column name="first_name" value="Solomon"/>
-            <column name="last_name" value="Knowles"/>
+            <column name="first_name" value="Manuel"/>
+            <column name="last_name" value="Carlson"/>
             <column name="index_number" value="MS 88/2023"/>
-            <column name="grade" valueNumeric="4.25"/>
-            <column name="description"
-                    value="Solomon enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="grade" valueNumeric="4.41"/>
+            <column name="description" value="Manuel loves playing basketball and coding apps."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="89"/>
-            <column name="first_name" value="Vance"/>
-            <column name="last_name" value="Daniel"/>
+            <column name="first_name" value="Brandy"/>
+            <column name="last_name" value="Mcintyre"/>
             <column name="index_number" value="MS 89/2023"/>
-            <column name="grade" valueNumeric="3.89"/>
-            <column name="description"
-                    value="Vance loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="grade" valueNumeric="4.29"/>
+            <column name="description" value="Brandy enjoys baking pastries and reading biographies."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="90"/>
-            <column name="first_name" value="Rajah"/>
-            <column name="last_name" value="Sims"/>
+            <column name="first_name" value="Malik"/>
+            <column name="last_name" value="Stewart"/>
             <column name="index_number" value="MS 90/2023"/>
-            <column name="grade" valueNumeric="3.74"/>
-            <column name="description"
-                    value="Rajah enjoys playing basketball, reading biographies, baking cookies, hiking in the mountains, and learning to play the piano."/>
+            <column name="grade" valueNumeric="4.24"/>
+            <column name="description" value="Malik loves reading graphic novels and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="91"/>
-            <column name="first_name" value="Thomas"/>
-            <column name="last_name" value="Warner"/>
+            <column name="first_name" value="Lillian"/>
+            <column name="last_name" value="Bishop"/>
             <column name="index_number" value="MS 91/2023"/>
-            <column name="grade" valueNumeric="4.16"/>
-            <column name="description"
-                    value="Thomas loves playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="grade" valueNumeric="4.35"/>
+            <column name="description" value="Lillian enjoys playing the violin and hiking in nature reserves."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="92"/>
-            <column name="first_name" value="Zane"/>
-            <column name="last_name" value="Valdez"/>
+            <column name="first_name" value="Parker"/>
+            <column name="last_name" value="Keller"/>
             <column name="index_number" value="MS 92/2023"/>
-            <column name="grade" valueNumeric="4.01"/>
-            <column name="description"
-                    value="Zane enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="grade" valueNumeric="4.09"/>
+            <column name="description" value="Parker loves painting landscapes and coding new software."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="93"/>
-            <column name="first_name" value="Tanek"/>
-            <column name="last_name" value="Haynes"/>
+            <column name="first_name" value="Tessa"/>
+            <column name="last_name" value="Schultz"/>
             <column name="index_number" value="MS 93/2023"/>
-            <column name="grade" valueNumeric="3.68"/>
-            <column name="description"
-                    value="Tanek loves playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="grade" valueNumeric="3.81"/>
+            <column name="description" value="Tessa enjoys drawing comic books and practicing yoga."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="94"/>
-            <column name="first_name" value="Kristen"/>
-            <column name="last_name" value="Marsh"/>
+            <column name="first_name" value="Stanley"/>
+            <column name="last_name" value="Nash"/>
             <column name="index_number" value="MS 94/2023"/>
-            <column name="grade" valueNumeric="4.07"/>
-            <column name="description"
-                    value="Kristen enjoys playing basketball, coding new software, reading graphic novels, hiking in nature trails, and baking bread."/>
+            <column name="grade" valueNumeric="4.47"/>
+            <column name="description" value="Stanley loves playing basketball and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="95"/>
-            <column name="first_name" value="Samson"/>
-            <column name="last_name" value="Shields"/>
+            <column name="first_name" value="Trey"/>
+            <column name="last_name" value="Patterson"/>
             <column name="index_number" value="MS 95/2023"/>
-            <column name="grade" valueNumeric="3.99"/>
-            <column name="description"
-                    value="Samson loves playing tennis, painting watercolors, reading biographies, hiking in the mountains, and baking cookies."/>
+            <column name="grade" valueNumeric="3.97"/>
+            <column name="description" value="Trey enjoys reading biographies and painting watercolors."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="96"/>
-            <column name="first_name" value="Akeem"/>
-            <column name="last_name" value="Hubbard"/>
+            <column name="first_name" value="Kirsten"/>
+            <column name="last_name" value="Kim"/>
             <column name="index_number" value="MS 96/2023"/>
-            <column name="grade" valueNumeric="3.96"/>
-            <column name="description"
-                    value="Akeem enjoys playing soccer, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="grade" valueNumeric="4.12"/>
+            <column name="description" value="Kirsten enjoys playing soccer and reading romance novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="97"/>
-            <column name="first_name" value="Juliet"/>
-            <column name="last_name" value="Salazar"/>
+            <column name="first_name" value="Cedric"/>
+            <column name="last_name" value="Bryant"/>
             <column name="index_number" value="MS 97/2023"/>
-            <column name="grade" valueNumeric="3.71"/>
-            <column name="description"
-                    value="Juliet enjoys playing basketball, reading biographies, baking cookies, hiking in the mountains, and learning to play the piano."/>
+            <column name="grade" valueNumeric="4.28"/>
+            <column name="description" value="Cedric loves playing the guitar and hiking in nature."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="98"/>
-            <column name="first_name" value="Bell"/>
-            <column name="last_name" value="Osborne"/>
+            <column name="first_name" value="Elena"/>
+            <column name="last_name" value="Gomez"/>
             <column name="index_number" value="MS 98/2023"/>
-            <column name="grade" valueNumeric="3.73"/>
-            <column name="description"
-                    value="Bell loves playing soccer, coding new software, reading graphic novels, hiking in nature trails, and baking pastries."/>
+            <column name="grade" valueNumeric="3.91"/>
+            <column name="description" value="Elena enjoys painting watercolors and reading mystery novels."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="99"/>
-            <column name="first_name" value="Kelsey"/>
-            <column name="last_name" value="Bradshaw"/>
+            <column name="first_name" value="Shawn"/>
+            <column name="last_name" value="Craig"/>
             <column name="index_number" value="MS 99/2023"/>
-            <column name="grade" valueNumeric="3.97"/>
-            <column name="description"
-                    value="Kelsey enjoys playing the violin, painting landscapes, reading mystery novels, hiking in the mountains, and baking cookies."/>
+            <column name="grade" valueNumeric="4.33"/>
+            <column name="description" value="Shawn loves playing soccer and learning to play the guitar."/>
         </insert>
         <insert tableName="student">
             <column name="id" valueNumeric="100"/>
-            <column name="first_name" value="Fitzgerald"/>
-            <column name="last_name" value="Hebert"/>
+            <column name="first_name" value="Brenna"/>
+            <column name="last_name" value="Hart"/>
             <column name="index_number" value="MS 100/2023"/>
-            <column name="grade" valueNumeric="3.81"/>
-            <column name="description"
-                    value="Fitzgerald loves playing tennis, reading science fiction, baking pastries, hiking in nature reserves, and learning to play the guitar."/>
+            <column name="grade" valueNumeric="3.98"/>
+            <column name="description" value="Brenna enjoys playing the piano and reading biographies."/>
         </insert>
     </changeSet>
     <changeSet author="milos.vukmanovic" id="002-3" context="init-data">
